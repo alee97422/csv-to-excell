@@ -1,7 +1,3 @@
-# csv-tool
-GUI and CLI version of the app that uploads csv files changes  a column to a certain data type
-
-
 
 # CSV Data Type Conversion
 
@@ -36,15 +32,15 @@ To save the modified DataFrame as an Excel file, click the "Save as Excel" butto
 
 To clear all fields and start a new conversion, click the "Clear" button.
 
-CLI Version
-Prerequisites
+## CLI Version
+
+### Prerequisites
 Python 3.x installed
 Required Python packages: pandas, xlsxwriter
-Usage
+
+### Usage
 Run the script cli vers.py using the following command:
 
-bash
-Copy code
 python clivers.py file_path column_name data_type [--save-csv SAVE_CSV] [--save-xlsx SAVE_XLSX]
 Replace file_path with the path to the CSV file you want to convert.
 
