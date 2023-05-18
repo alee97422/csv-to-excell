@@ -1,5 +1,5 @@
 import tkinter as tk
-from tkinter import ttk
+import ttkbootstrap as ttk
 from tkinter import filedialog
 import pandas as pd
 import xlsxwriter
@@ -115,13 +115,14 @@ def clear_fields():
         sample_data_text.configure(state="disabled")
 
 # Create Tkinter window
-window = tk.Tk()
+window = ttk.Window()
 window.title("Column Destroyer")
-window.geometry("800x600")
-window.resizable(800, 600)
+window.geometry("400x600")
+
 
 # Create a style for labels with purple lettering
 style = ttk.Style()
+style.theme_use("solar")  # Choose the desired theme for dark mode, e.g., "clam" or "alt"
 style.configure("DarkLabel.TLabel",
                 foreground="#b64fcf",  # Set foreground color to purple
                 #background="#1f1f1f",  # Set background color to dark gray
@@ -157,7 +158,7 @@ column_variable.trace("w", update_current_data_type_label)
 # Data type dropdown
 data_type_variable = tk.StringVar(window)
 data_type_variable.set("Target Data Type")
-data_type_dropdown = tk.OptionMenu(window, data_type_variable, "String", "Integer", "Float")
+data_type_dropdown = tk.OptionMenu(window, data_type_variable, "String", "Integer", "Float", "      ")
 data_type_dropdown.grid(row=0, column=1, padx=10, pady=10)
 
 # Current data type label
